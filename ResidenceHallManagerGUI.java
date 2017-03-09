@@ -4,31 +4,26 @@
 import javafx.application.Application;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.*;
 
 
-public class ResidenceHallManagerGUI extends Application{
+public class ResidenceHallManagerGUI extends Application {
+    public static Floor[] floors = new Floor[3];
+    //menu scene objects
+    Button btnA, btnR, btnS, btnM, btnF, btnC, btnP, btnW, btnQ;
+    FlowPane pane1, pane2;
+    Scene menu, scene2;
+    Stage stage;
+
     public static void main(String[] args) {
         launch(args);
     }
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Test");
-        Button btn = new Button();
-        btn.setText("This is a test");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
 
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        primaryStage.setScene(new Scene(root, 300, 250));
-        primaryStage.show();
     }
 }
