@@ -9,6 +9,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.*;
 
+import java.awt.event.MouseEvent;
+
 
 public class ResidenceHallManagerGUI extends Application {
     public static Floor[] floors = new Floor[3];
@@ -34,6 +36,7 @@ public class ResidenceHallManagerGUI extends Application {
         btnP = new Button("Display floor");
         btnW = new Button("Writeup student");
         btnQ = new Button("Quit");
+
         menu = new BorderPane();
         menuItems = new VBox();
         menuItems.getChildren().addAll(btnA, btnR, btnS, btnM, btnF, btnC, btnP, btnW, btnQ);
@@ -41,8 +44,16 @@ public class ResidenceHallManagerGUI extends Application {
         menu.setCenter(menuItems);
         scene1 = new Scene(menu);
         stage.setScene(scene1);
-        btnQ.addEventHandler();
-        
+
+        //menu button actions
+
+        btnQ.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.exit(0);
+            }
+        });
+
         stage.show();
     }
 }
