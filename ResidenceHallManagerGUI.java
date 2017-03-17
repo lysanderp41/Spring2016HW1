@@ -16,7 +16,7 @@ public class ResidenceHallManagerGUI extends Application {
     public static Floor[] floors = new Floor[3];
     //menu scene objects
     Button btnA, btnR, btnS, btnM, btnF, btnC, btnP, btnW, btnQ;
-    BorderPane menu, pane2;
+    BorderPane menu, paneA, paneR, paneS, paneM, paneF, paneC, paneP, paneW;
     VBox menuItems;
     Scene scene1, scene2;
     Stage stage;
@@ -37,13 +37,40 @@ public class ResidenceHallManagerGUI extends Application {
         btnW = new Button("Writeup student");
         btnQ = new Button("Quit");
 
+        //creates menu pane
         menu = new BorderPane();
         menuItems = new VBox();
         menuItems.getChildren().addAll(btnA, btnR, btnS, btnM, btnF, btnC, btnP, btnW, btnQ);
         menuItems.setSpacing(4);
         menu.setCenter(menuItems);
+
+        //current scene is initialized to the menu
         scene1 = new Scene(menu);
         stage.setScene(scene1);
+
+        //add student
+        paneA = new BorderPane();
+
+        //remove student
+        paneR = new BorderPane();
+
+        //swap student
+        paneS = new BorderPane();
+
+        //move student
+        paneM = new BorderPane();
+
+        //select floor
+        paneF = new BorderPane();
+
+        //copy floor
+        paneC = new BorderPane();
+
+        //display floor
+        paneP = new BorderPane();
+
+        //writeup student
+        paneW = new BorderPane();
 
         //menu button actions
 
