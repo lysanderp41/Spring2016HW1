@@ -53,6 +53,7 @@ public class ResidenceHallManagerGUI extends Application {
                 System.exit(0);
             }
         });
+        
 
         stage.show();
     }
